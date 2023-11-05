@@ -23,7 +23,7 @@ jobs:
           git clone --depth 1 https://github.com/DanBloomberg/leptonica.git
           cd leptonica
           ./autogen.sh
-          ./configure '--with-pic' '--disable-shared' '--without-libpng' '--without-zlib' '--without-jpeg' '--without-libtiff' '--without-giflib' '--without-libwebp' '--without-libwebpmux' '--without-libopenjpeg' '--disable-programs' 'CXX=clang++' 'CFLAGS=-D DEFAULT_SEVERITY=L_SEVERITY_ERROR -g0 -O3 -mmacosx-version-min=13' -arch arm64'
+          ./configure '--with-pic' '--disable-shared' '--without-libpng' '--without-zlib' '--without-jpeg' '--without-libtiff' '--without-giflib' '--without-libwebp' '--without-libwebpmux' '--without-libopenjpeg' '--disable-programs' 'CXX=clang++' 'CFLAGS=-D DEFAULT_SEVERITY=L_SEVERITY_ERROR -g0 -O3 -mmacosx-version-min=13 -arch arm64'
           make
           sudo make install
 
@@ -33,7 +33,7 @@ jobs:
           git clone --depth 1 --branch 5.3.3 https://github.com/tesseract-ocr/tesseract.git
           cd tesseract
           ./autogen.sh
-          ./configure '--with-pic' '--disable-shared' '--disable-legacy' '--disable-graphics' '--disable-openmp' '--without-curl' '--without-archive' '--disable-doc' 'CXX=clang++' 'CXXFLAGS=-DTESS_EXPORTS -g0 -O3 -ffast-math -mmacosx-version-min=13' -arch arm64'
+          ./configure '--with-pic' '--disable-shared' '--disable-legacy' '--disable-graphics' '--disable-openmp' '--without-curl' '--without-archive' '--disable-doc' 'CXX=clang++' 'CXXFLAGS=-DTESS_EXPORTS -g0 -O3 -ffast-math -mmacosx-version-min=13 -arch arm64'
           make
           sudo make install install
 
